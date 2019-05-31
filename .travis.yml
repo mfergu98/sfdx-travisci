@@ -11,6 +11,9 @@ before_install:
 - export SFDX_DOMAIN_RETRY=300
 - export SFDX_DISABLE_APP_HUB=true
 - export SFDX_LOG_LEVEL=DEBUG
+- export CONSUMER_KEY=3MVG9KsVczVNcM8ygsu2KkHkP_OHBmdvfQ9LxHZ7xTmuA4apsAudoVinJfQhlZcRpORwZfa0x5J5gkBZO05WW
+- export JWT_KEY_FILE=assets/server.key
+- export HUB_USERNAME=mark.ferguson@cunning-wolf-q7was4.com
 - mkdir sfdx
 - wget -qO- $URL | tar xJ -C sfdx --strip-components 1
 - "./sfdx/install"
