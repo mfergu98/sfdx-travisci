@@ -13,14 +13,14 @@ before_install:
 - export SFDX_LOG_LEVEL=DEBUG
 - export CONSUMER_KEY=3MVG9KsVczVNcM8ygsu2KkHkP_OHBmdvfQ9LxHZ7xTmuA4apsAudoVinJfQhlZcRpORwZfa0x5J5gkBZO05WW
 - export JWT_KEY_FILE=assets/server.key
-- export HUB_USERNAME=mark.ferguson@cunning-wolf-q7was4.com
+- export HUB_USERNAME="mark.ferguson@cunning-wolf-q7was4.com"
 - mkdir sfdx
 - wget -qO- $URL | tar xJ -C sfdx --strip-components 1
 - "./sfdx/install"
 - export PATH=./sfdx/$(pwd):$PATH
 - sfdx --version
 - sfdx plugins --core
-- sfdx force:auth:jwt:grant --clientid $CONSUMER_KEY --jwtkeyfile $JWT_Key_File --u $HUB_USERNAME --setdefaultdevhubusername -a HubOrg
+- sfdx force:auth:jwt:grant --clientid $CONSUMER_KEY --jwtkeyfile $JWT_Key_File --user $HUB_USERNAME --setdefaultdevhubusername -a HubOrg
 
 
 script:
