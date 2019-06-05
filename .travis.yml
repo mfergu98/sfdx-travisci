@@ -20,7 +20,7 @@ before_install:
 - export PATH=./sfdx/$(pwd):$PATH
 - sfdx --version
 - sfdx plugins --core
-- sfdx force:auth:jwt:grant --clientid $CONSUMER_KEY --jwtkeyfile $JWT_Key_File --username $HUB_USERNAME --setdefaultdevhubusername -a HubOrg
+- sfdx force:auth:jwt:grant --clientid $CONSUMER_KEY --jwtkeyfile $JWT_Key_File --u $HUB_USERNAME --setdefaultdevhubusername -a HubOrg
 
 
 script:
